@@ -1,0 +1,24 @@
+server:
+  port: 6700
+  servlet:
+    context-path: /ssqmq
+
+logging:
+  config: classpath:logback.xml
+
+ssqmq:
+  server:
+    port: 6800
+    sobacklog: 65536
+    datadir: D:\good\project\mes\ssq_mq\ssqmq_server\src\main\resources\queue\data\
+    indexdir: D:\good\project\mes\ssq_mq\ssqmq_server\src\main\resources\queue\index\
+  datasource:
+    admin:
+      username: ssq
+      password: 123456
+      driver-class-name: org.sqlite.JDBC
+      jdbc-url: jdbc:sqlite::resource:ssq_mq.db
+  mybatis:
+    xml:
+      admin: classpath*:mappers/admin/*.xml
+

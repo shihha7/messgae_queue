@@ -1,0 +1,10 @@
+server:
+  port: 6800
+  servlet:
+    context-path: /ssqmq
+
+
+
+logging:
+  config: classpath:logback.xml
+
